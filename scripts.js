@@ -1,3 +1,4 @@
+
 document.getElementById("myDiv").style.backgroundColor = "lightblue";
 
 const paragraphs = document.querySelectorAll("p");
