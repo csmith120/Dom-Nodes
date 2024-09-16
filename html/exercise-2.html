@@ -10,8 +10,14 @@
 <body>
 
 <!-- Button with inline event handler -->
- <button class="btn btn-inline" onclick="alert('Button clicked!')">click me</button>
+ <button class="btn btn-inline" onclick="changeBackground()">click me</button>
 
 </body>
+<script>
+    function changeBackground() {
+        document.body.style.backgroundColor = "black";
+        document.querySelector('.btn-inline').style.backgroundColor = "lightblue";
+    }
+</script>
 
 </html>
