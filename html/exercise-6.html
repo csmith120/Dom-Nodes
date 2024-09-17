@@ -20,11 +20,18 @@
 
    const ul = document.querySelector('ul');
 
-   items.forEach(items => {
+   items.forEach((items, index) => {
     const li = document.createElement('li');
     li.textContent = items.name;
+
+    // Set background color for even items
+    if (index % 2 === 1) {
+        li.style.backgroundColor = 'gray';
+    }
+    
     ul.appendChild(li)
    })
 
+   
 </script>
 </html>
