@@ -7,5 +7,24 @@
 </head>
 <body>
     
+    <ul id="itemList"></ul>
+
 </body>
+<script>
+    const items = [
+        {name: 'Item 1'},
+        {name: 'Item 2'},
+        {name: 'Item 3'},
+        {name: 'Item 4'}
+    ];
+
+   const ul = document.querySelector('ul');
+
+   items.forEach(items => {
+    const li = document.createElement('li');
+    li.textContent = items.name;
+    ul.appendChild(li)
+   })
+
+</script>
 </html>
