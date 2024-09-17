@@ -9,8 +9,33 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <button class="btn btn-inline" onclick="console.log('clicked')">click me</button>
-    <button class="btn btn-inline" onclick="console.log('clicked')">click me</button>
-    <button class="btn btn-inline" onclick="console.log('clicked')">click me</button>
+
+    <button class="btn btn-inline">click me</button>
+    <button class="btn btn-inline">click me</button>
+    <button class="btn btn-inline">click me</button>
+    
 </body>
+<script>
+  const buttons = document.querySelectorAll('.btn-inline');
+
+// Function to generate a random color
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+// Loop over each button and add event listener
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        document.body.style.backgroundColor = getRandomColor();
+        button.style.backgroundColor = getRandomColor();
+    });
+});
+
+
+</script>
 </html>
