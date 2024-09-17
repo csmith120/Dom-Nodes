@@ -7,6 +7,8 @@
 </head>
 <body>
     <ul id="itemList"></ul>
+    <input type="text" id="userInput" placeholder="Type something...">
+    <p id="displayText"></p>
 </body>
 <script>
     const items = [
@@ -15,5 +17,12 @@
         {name: 'Item 3'},
         {name: 'Item 4'}
     ];
+
+    const inputElement = document.getElementById('userInput');
+    const displayElement = document.getElementById('displayText');
+
+    inputElement.addEventListener('input', () => {
+        displayElement.textContent = inputElement.value;
+    });
 </script>
 </html>
